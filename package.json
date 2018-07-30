@@ -1,0 +1,30 @@
+{
+  "name": "el-dear-web-app",
+  "version": "0.0.1",
+  "description": "Web application for the El Dear system",
+  "main": "index.js",
+  "repository": "git@github.ibm.com:Vincent-Patrick-Picone/el-dear-web-app.git",
+  "author": "Vincent Picone <Vincent.Patrick.Picone@ibm.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "npm run build --prefix client && now"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^2.6.2",
+    "now": "^11.3.3",
+    "prettier": "^1.14.0"
+  }
+}
